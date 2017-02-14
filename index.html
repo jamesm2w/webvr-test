@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+        <title>Holodeck 1 :: jamesm2w.github</title>
+    </head>
+    <body>
+    <a-scene>
+        <a-assets>
+            <img id="sph_world" src="texture.png" alt="world">
+            <img id="pln_grass" src="texture_grass.png" alt="Grass">
+        </a-assets>
+    
+        <a-plane src="#pln_grass" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
+
+        <a-sphere radius="2" src="#sph_world" position="5 3 5">
+            <a-animation attribute="position" to="5 4 5" direction="alternate" dur="2500" repeat="indefinite"></a-animation>
+        </a-sphere>
+
+        <a-sky color="#ECECEC"></a-sky>
+
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+
+    </a-scene>
+    <script>
+        var box = document.querySelector('a-box');
+        box.getAttribute('position');
+        box.addEventListener('click', function () {
+	        box.setAttribute('color', 'red');
+        });
+    </script>
+    </body>
+</html>
