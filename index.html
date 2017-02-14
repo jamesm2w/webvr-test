@@ -12,8 +12,13 @@
     
         <a-plane src="#pln_grass" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
 
-        <a-sphere radius="2" src="#sph_world" position="5 3 5">
-            <a-animation attribute="position" to="5 4 5" direction="alternate" dur="2500" repeat="indefinite"></a-animation>
+        <a-sphere radius="2" src="#sph_world" position="-5 3 -5">
+            <a-animation attribute="position" to="-5 4 -5" direction="alternate" dur="2500" repeat="indefinite"></a-animation>
+
+            <!--Event Animations-->
+              <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.5 1.5 1.5"></a-animation>
+              <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
+              <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
         </a-sphere>
 
         <a-sky color="#ECECEC"></a-sky>
@@ -24,11 +29,6 @@
 
     </a-scene>
     <script>
-        var box = document.querySelector('a-box');
-        box.getAttribute('position');
-        box.addEventListener('click', function () {
-	        box.setAttribute('color', 'red');
-        });
     </script>
     </body>
 </html>
