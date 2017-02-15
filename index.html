@@ -10,6 +10,7 @@
             <img id="sph_world" src="texture.png" alt="world">
             <img id="pln_grass" src="texture_grass.png" alt="Grass">
             <img id="sky" src="sky_sphere1.png" alt="sky">
+            <a-asset-item id="cello" src="cello.dae">
         </a-assets>
     
         <a-plane src="#pln_grass" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
@@ -23,14 +24,21 @@
               <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
         </a-sphere>
 
+        
+
         <a-sky src="#sky"></a-sky>
 
         <a-text value="Welcome to the Holodeck" color="#e10005" rotation="0 49.85 0" position="-4.22 2.04 -1.85" scale="1.5 1.5 1.5"></a-text>
        
 
-        <a-camera>
+        <!--Camera & Stuff-->
+        <!--<a-camera>
             <a-cursor></a-cursor>
-        </a-camera>
+        </a-camera>-->
+
+        <a-entity camera="userHeight: 1.6" look-controls wasd-controls>
+            <a-cursor></a-cursor>
+        </a-entity>
 
     </a-scene>
     <script>
